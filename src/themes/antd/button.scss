@@ -1,0 +1,108 @@
+.ant-btn {
+  --bg-btn: var(--white);
+  --bg-btn-hover: var(--white);
+  --bg-btn-disabled: var(--light-1);
+  --border-btn: var(--gray-1);
+  --border-btn-hover: var(--neutral-5);
+  --border-btn-disabled: var(--light-3);
+  --color-btn: var(--text-base);
+  --color-btn-hover: var(--text-base);
+  --color-btn-disabled: var(--text-secondary);
+
+  height: auto;
+  padding: 8px 15px;
+  line-height: 1.57;
+  font-size: var(--font-size-m);
+  border-radius: var(--border-radius-m);
+  border-color: var(--border-btn);
+  color: var(--color-btn);
+  background: var(--bg-btn);
+
+  &:hover,
+  &:focus {
+    background: var(--bg-btn-hover);
+    border-color: var(--border-btn-hover);
+    color: var(--color-btn-hover);
+  }
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:focus {
+    background: var(--bg-btn-disabled);
+    border-color: var(--border-btn-disabled);
+    color: var(--color-btn-disabled);
+  }
+
+  & > .anticon + span,
+  & > span + .anticon {
+    margin-inline-start: 12px;
+  }
+  &.secondary {
+    --bg-btn: var(--white);
+    --bg-btn-hover: var(--white);
+    --bg-btn-disabled: var(--white);
+    --border-btn: var(--primary);
+    --border-btn-hover: var(--blue-6);
+    --border-btn-disabled: var(--blue-2);
+    --color-btn: var(--text-active);
+    --color-btn-hover: var(--text-active);
+    --color-btn-disabled: var(--blue-2);
+  }
+  &-sm {
+    padding: 5px 15px;
+    font-size: var(--font-size-s);
+    line-height: 1.67;
+  }
+  &-lg {
+    padding: 11px 15px;
+    font-size: var(--font-size-l);
+    line-height: 1.5;
+  }
+}
+.ant-btn-link,
+.ant-btn-text {
+  --bg-btn: transparent;
+  --bg-btn-hover: transparent;
+  --bg-btn-disabled: transparent;
+  --border-btn: transparent;
+  --border-btn-hover: transparent;
+  --border-btn-disabled: transparent;
+  --color-btn: var(--text-active);
+  --color-btn-hover: var(--blue-6);
+  --color-btn-disabled: var(--blue-2);
+}
+.ant-btn-primary {
+  --bg-btn: var(--primary);
+  --bg-btn-hover: var(--blue-6);
+  --bg-btn-disabled: var(--blue-2);
+  --border-btn: var(--primary);
+  --border-btn-hover: var(--blue-6);
+  --border-btn-disabled: var(--blue-2);
+  --color-btn: var(--text-white);
+  --color-btn-hover: var(--text-white);
+  --color-btn-disabled: var(--text-white);
+}
+.ant-btn-dangerous {
+  --bg-btn: var(--bg-light);
+  --bg-btn-hover: var(--bg-light);
+  --bg-btn-disabled: var(--bg-light);
+  --border-btn: var(--red-4);
+  --border-btn-hover: var(--red-3);
+  --border-btn-disabled: var(--red-2);
+  --color-btn: var(--red-4);
+  --color-btn-hover: var(--red-3);
+  --color-btn-disabled: var(--red-2);
+}
+
+.ant-btn-link,
+.ant-btn-link span {
+  text-decoration: underline;
+}
+.ant-input-search
+  > .ant-input-group
+  > .ant-input-group-addon:last-child
+  .ant-input-search-button {
+  height: 40px;
+  width: auto;
+  min-width: 52px;
+  border-radius: 0 var(--border-radius-m) var(--border-radius-m) 0;
+}

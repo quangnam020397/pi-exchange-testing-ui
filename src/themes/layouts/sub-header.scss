@@ -1,0 +1,11 @@
+.common__sub__header {
+  @apply p-6 bg-bg-secondary flex shadow-sm  items-center justify-between;
+  > :first-child {
+    > :first-child {
+      @apply text-xl m-0 leading-7 text-text-base font-semibold;
+    }
+    > :nth-child(2) {
+      @apply text-text-gray text-s leading-5;
+    }
+  }
+}

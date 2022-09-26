@@ -1,0 +1,193 @@
+@import './button.scss';
+@import './form.scss';
+@import './table.scss';
+@import './modal.scss';
+
+.ant-input,
+.ant-picker,
+.ant-input-number,
+.ant-input-affix-wrapper,
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  --border-input: var(--light-3);
+  --border-input-hover: var(--gray-4);
+  --border-input-disabled: var(--light-3);
+  --color-input: var(--text-base);
+  --color-input-hover: var(--text-base);
+  --color-input-disabled: var(--gray-1);
+  line-height: 1.57;
+  height: auto;
+  padding: 8px 13px;
+  border-radius: var(--border-radius-m);
+  font-size: var(--font-size-m);
+  border-color: var(--border-input);
+  color: var(--color-input);
+  &:focus,
+  &:hover,
+  .ant-input-search &:focus,
+  .ant-input-search &:hover {
+    box-shadow: none;
+    color: var(--color-input-hover);
+    border-color: var(--border-input-hover);
+  }
+  &[disabled] {
+    background: var(--light-1);
+    border-color: var(---border-input-disabled);
+    color: var(--color-input-disabled);
+  }
+}
+.ant-picker {
+  width: 100%;
+}
+
+.ant-select {
+  &-arrow,
+  &-clear {
+    right: 16px;
+  }
+  &-clear {
+    margin-block-start: -8px;
+  }
+  &-multiple &-selection-item-remove {
+    display: inline-flex;
+    align-items: center;
+  }
+  &-single {
+    &:not(.ant-select-customize-input) .ant-select-selector::after {
+      line-height: 22px;
+    }
+    .ant-select-selector .ant-select-selection {
+      &-item,
+      &-placeholder {
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+.ant-input-number-input {
+  height: auto;
+  padding: 0;
+}
+
+.ant-radio {
+  --color-radio: var(--gray-3);
+  + span {
+    color: var(--color-radio);
+    line-height: 1.57;
+  }
+}
+.ant-radio-inner {
+  --border-radio: var(--gray-3);
+  --border-radio-active: var(--primary);
+  --border-radio-disabled: var(--gray-1);
+  --bg-inner-radio-active: var(--primary);
+  --bg-inner-radio-disabled: var(--gray-1);
+  border-color: var(--border-radio);
+  border-width: 2px;
+  width: 20px;
+  height: 20px;
+  &:after {
+    background-color: var(--bg-inner-radio-active);
+  }
+  .ant-radio-checked & {
+    border-color: var(--border-radio-active);
+  }
+  .ant-radio-disabled & {
+    background: none;
+    // I have to use important since ant's style use !important too
+    border-color: var(--border-radio-disabled) !important;
+    &:after {
+      background-color: var(--bg-inner-radio-disabled);
+    }
+  }
+}
+
+.ant-checkbox {
+  --color-checkbox: var(--gray-3);
+  top: 0;
+  &-wrapper {
+    align-items: center;
+  }
+  + span {
+    color: var(--color-checkbox);
+    line-height: 1.57;
+  }
+}
+.ant-checkbox-indeterminate {
+  .ant-checkbox-inner::after {
+    @apply w-4 h-4 rounded-s bg-bg-primary;
+  }
+}
+.ant-checkbox-inner {
+  --border-checkbox: var(--gray-1);
+  --border-checkbox-active: var(--primary);
+  --border-checkbox-disabled: var(--gray-1);
+  --bg-checkbox-active: var(--primary);
+  --bg-checkbox-checked-disabled: var(--gray-1);
+  --checkbox-tick-color: var(--white);
+  border-color: var(--border-checkbox);
+  width: 24px;
+  height: 24px;
+  &::after,
+  .ant-checkbox-disabled.ant-checkbox-checked &::after {
+    border-color: var(--checkbox-tick-color);
+    left: 30%;
+  }
+  .ant-checkbox-wrapper:hover &,
+  .ant-checkbox:hover &,
+  .ant-checkbox-input:focus + & {
+    border-color: var(--border-checkbox-active);
+  }
+
+  .ant-checkbox-checked & {
+    border-color: var(--border-checkbox-active);
+    background: var(--bg-checkbox-active);
+  }
+  .ant-checkbox-disabled & {
+    // I have to use important since ant's style use !important too
+    background: none;
+    border-color: var(--border-checkbox-disabled) !important;
+  }
+  .ant-checkbox-disabled.ant-checkbox-checked & {
+    background: var(--bg-checkbox-checked-disabled);
+  }
+}
+
+.ant-tag {
+  --bg-tag: var(--light-2);
+  --color-tag: var(--gray-3);
+  padding: 5px 12px;
+  border-radius: 10000px;
+  border: none;
+  color: var(--color-tag);
+  background: var(--bg-tag);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  display: inline-flex;
+  align-items: center;
+  &-success {
+    --color-tag: var(--green-6);
+    --bg-tag: var(--green-1);
+  }
+  &-warning {
+    --color-tag: var(--yellow-7);
+    --bg-tag: var(--yellow-1);
+  }
+  &-error {
+    --color-tag: var(--red-3);
+    --bg-tag: var(--red-1);
+  }
+  & > .anticon + span,
+  & > span + .anticon {
+    margin-inline-start: 8px;
+  }
+  &.large {
+    font-size: var(--font-size-m);
+    line-height: 1.57;
+  }
+  &.extra-large {
+    font-size: var(--font-size-l);
+    line-height: 1.5;
+  }
+}

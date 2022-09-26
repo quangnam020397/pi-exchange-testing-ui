@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './variables.scss';
+@import './antd/main.scss';
+@import './layouts/main.scss';
+
+// custom to hide notification in mceditor
+.tox.tox-silver-sink.tox-tinymce-aux .tox-notifications-container {
+  display: none;
+}
+
+/*Two hide arrow keys of input fields when type is number*/
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+// Override default z-index to prevent
+// items that not scroll-lock show on top of header
+.cdk-global-scrollblock {
+  .cdk-overlay-container {
+    z-index: 1000;
+  }
+}
+.cdk-overlay-container {
+  z-index: 11;
+}

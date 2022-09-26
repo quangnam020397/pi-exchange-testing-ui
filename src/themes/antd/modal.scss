@@ -1,0 +1,22 @@
+.ant-modal-header {
+  @apply bg-bg-secondary rounded-xl py-5;
+}
+.ant-modal-title {
+  @apply leading-6 font-semibold;
+}
+.ant-modal-content {
+  @apply rounded-xl;
+}
+.ant-modal-close {
+  @apply top-0.5 right-1.5;
+}
+.ant-modal-close-icon {
+  @apply relative;
+  &::before {
+    @apply -z-[1] w-8 h-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-bg-light-gray block absolute top-1/2 left-1/2;
+    content: '';
+  }
+}
+.ant-modal-footer {
+  @apply border-0;
+}

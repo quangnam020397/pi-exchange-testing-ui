@@ -1,0 +1,56 @@
+.ant-form-item-explain,
+.ant-form-item-extra {
+  font-size: var(--font-size-s);
+  line-height: 1.33;
+  margin-block-start: 4px;
+}
+.ant-form-vertical .ant-form-item-label {
+  font-size: var(--font-size-m);
+  line-height: 1.57;
+  padding: 0;
+  margin-block-end: 4px;
+}
+.ant-form-item-explain {
+  &-error {
+    color: var(--text-danger);
+  }
+  &-warning {
+    color: var(--text-warning);
+  }
+}
+.ant-form-item-has-feedback {
+  &.ant-form-item-has-success .ant-form-item-children-icon,
+  &.ant-form-item-has-warning .ant-form-item-children-icon,
+  &.ant-form-item-has-error .ant-form-item-children-icon,
+  &.ant-form-item-is-validating .ant-form-item-children-icon {
+    margin-block-start: -13px;
+  }
+}
+.ant-form-item-has-warning {
+  .ant-input-number,
+  .ant-picker,
+  .ant-input-number:not([disabled]):hover,
+  .ant-picker:not([disabled]):hover,
+  :not(.ant-input-disabled):not(.ant-input-borderless).ant-input,
+  :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper,
+  :not(.ant-input-number-affix-wrapper-disabled):not(.ant-input-number-affix-wrapper-borderless).ant-input-number-affix-wrapper,
+  :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover,
+  :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover,
+  :not(.ant-input-number-affix-wrapper-disabled):not(.ant-input-number-affix-wrapper-borderless).ant-input-number-affix-wrapper:hover {
+    border-color: var(--text-warning);
+  }
+}
+.ant-form-item-has-error {
+  .ant-input-number,
+  .ant-picker,
+  .ant-input-number:not([disabled]):hover,
+  .ant-picker:not([disabled]):hover,
+  :not(.ant-input-disabled):not(.ant-input-borderless).ant-input,
+  :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper,
+  :not(.ant-input-number-affix-wrapper-disabled):not(.ant-input-number-affix-wrapper-borderless).ant-input-number-affix-wrapper,
+  :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover,
+  :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover,
+  :not(.ant-input-number-affix-wrapper-disabled):not(.ant-input-number-affix-wrapper-borderless).ant-input-number-affix-wrapper:hover {
+    border-color: var(--text-danger);
+  }
+}
