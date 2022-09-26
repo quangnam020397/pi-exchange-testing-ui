@@ -1,0 +1,80 @@
+{
+  "name": "erp-admin-portal",
+  "version": "0.0.1",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve --port 3000 --open --configuration=development --host=0.0.0.0 --disableHostCheck=true",
+    "start:local": "ng serve --port 4200 --open --configuration=local --host=0.0.0.0 --disableHostCheck=true",
+    "build": "node --max_old_space_size=16384 ./node_modules/@angular/cli/bin/ng build --configuration production",
+    "build-dev": "node --max_old_space_size=16384 ./node_modules/@angular/cli/bin/ng build --configuration development",
+    "build-qa": "node --max_old_space_size=16384 ./node_modules/@angular/cli/bin/ng build --configuration qa",
+    "build-stg": "node --max_old_space_size=16384 ./node_modules/@angular/cli/bin/ng build --configuration staging",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "format": "npx prettier --write .",
+    "fix": "ng lint --fix",
+    "lint:test": "eslint src/**/*.js src/**/*.jsx",
+    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.html, --quiet --fix --ignore-path ./.gitignore",
+    "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,html,scss,css,md,json}\" ",
+    "lint": "npm run lint:fix && npm run lint:format",
+    "prepare": "husky install"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~13.3.0",
+    "@angular/common": "~13.3.0",
+    "@angular/compiler": "~13.3.0",
+    "@angular/core": "~13.3.0",
+    "@angular/forms": "~13.3.0",
+    "@angular/platform-browser": "~13.3.0",
+    "@angular/platform-browser-dynamic": "~13.3.0",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0",
+    "@angular/router": "~13.3.0",
+    "ng-zorro-antd": "^13.2.2",
+    "rxjs": "~7.5.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~13.3.5",
+    "@angular-eslint/builder": "13.2.1",
+    "@angular-eslint/eslint-plugin": "13.2.1",
+    "@angular-eslint/eslint-plugin-template": "13.2.1",
+    "@angular-eslint/schematics": "13.2.1",
+    "@angular-eslint/template-parser": "13.2.1",
+    "@angular/cli": "~13.3.5",
+    "@angular/compiler-cli": "~13.3.0",
+    "@types/jasmine": "~3.10.0",
+    "@types/node": "^12.11.1",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "5.17.0",
+    "@typescript-eslint/parser": "5.17.0",
+    "autoprefixer": "^10.4.7",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.1",
+    "jasmine-core": "~4.0.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.1.0",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "postcss": "^8.4.14",
+    "prettier": "^2.6.2",
+    "prettier-eslint": "^15.0.0",
+    "tailwindcss": "^3.0.24",
+    "typescript": "~4.6.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "npm run lint"
+    ]
+  }
+}
