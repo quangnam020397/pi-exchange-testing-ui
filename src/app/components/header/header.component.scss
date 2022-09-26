@@ -1,0 +1,25 @@
+:host {
+  @apply h-auto w-full z-10;
+  display: flex;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app__header {
+  @apply flex h-16 pl-6 pr-10 py-4 bg-bg-light justify-between items-center;
+}
+
+.header__profile {
+  @apply flex items-center;
+}
+
+.header__breadcrumb {
+  nz-breadcrumb {
+    @apply font-semibold text-2xl;
+  }
+}
+
+.navbar__expand {
+  @apply pl-[250px];
+}

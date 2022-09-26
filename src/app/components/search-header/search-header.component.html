@@ -1,0 +1,23 @@
+<div class="left">
+  <nz-input-group
+    *ngIf="showSearch"
+    nzSize="large"
+    nzSearch
+    [nzAddOnAfter]="suffixIconButton">
+    <input
+      type="search"
+      class="w-64"
+      nz-input
+      [formControl]="searchControl"
+      (keyup.enter)="handleSearch()"
+      placeholder="input search text" />
+  </nz-input-group>
+  <ng-template #suffixIconButton>
+    <button (click)="handleSearch()" nzType="primary" nz-button nzSearch>
+      <i nz-icon nzType="search"></i>
+    </button>
+  </ng-template>
+</div>
+<div class="right">
+  <ng-content></ng-content>
+</div>

@@ -1,0 +1,80 @@
+export const DATA_ROUTING = [
+  {
+    name: 'New Enquiry Monitoring',
+    url: '/new-enquiry',
+    icon: 'file-search',
+    i18nKey: 'navMenu.newEnquiry',
+  },
+  {
+    name: 'Companies Setup',
+    url: '/company',
+    icon: 'apartment',
+    i18nKey: 'navMenu.company',
+  },
+  {
+    name: 'Finance/ Bank Setup',
+    url: '/finance',
+    icon: 'group',
+    i18nKey: 'navMenu.finance',
+  },
+  {
+    name: 'Make & Model Setup',
+    url: '/make-model',
+    icon: 'hdd',
+    i18nKey: 'navMenu.makeModel',
+  },
+  {
+    name: 'Vehicle Type',
+    url: '/vehicle-type',
+    icon: 'insert-row-below',
+    i18nKey: 'navMenu.vehicleType',
+  },
+  {
+    name: 'Vehicle Body',
+    url: '/vehicle-body',
+    icon: 'funnel-plot',
+    i18nKey: 'navMenu.vehicleBody',
+  },
+  {
+    name: 'Vehicle Cost Type Setup',
+    url: '/vehicle-cost',
+    icon: 'database',
+    i18nKey: 'navMenu.vehicleCost',
+  },
+  {
+    name: 'Insurance Company',
+    url: '/insurance',
+    icon: 'credit-card',
+    i18nKey: 'navMenu.insurance',
+  },
+  {
+    name: 'Tax Type Setup',
+    url: '/tax',
+    icon: 'mail',
+    i18nKey: 'navMenu.tax',
+  },
+  {
+    name: 'Users Manage',
+    url: '/user',
+    icon: 'user',
+    i18nKey: 'navMenu.user',
+  },
+  {
+    name: 'Email Setup',
+    url: '/email',
+    icon: 'mail',
+    i18nKey: 'navMenu.email',
+  },
+  {
+    name: 'Audit Trail',
+    url: '/audit',
+    icon: 'team',
+    i18nKey: 'navMenu.audit',
+  },
+  {
+    name: 'Notification',
+    url: '/notification',
+    icon: 'bell',
+    i18nKey: 'navMenu.notification',
+  },
+];

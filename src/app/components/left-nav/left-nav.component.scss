@@ -1,0 +1,63 @@
+:host {
+  @apply fixed top-0 left-0;
+}
+
+// normal styles
+.menu__sidebar {
+  @apply flex flex-col h-full;
+
+  width: 251px;
+  z-index: 100;
+
+  .sidebar__logo {
+    @apply w-full h-16 p-6 w-full flex justify-between items-center;
+
+    .nav__trigger {
+      @apply h-5 w-5 flex items-center justify-center;
+    }
+  }
+
+  .nav__content {
+    @apply overflow-x-hidden;
+    flex: 1 1 auto;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: #f5f5f5;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba($color: #5f5f5f, $alpha: 0.3);
+      border-radius: 3px;
+    }
+  }
+
+  .footer__content {
+    @apply pt-8;
+    height: 116px;
+    border-top: 1px solid rgba(227, 227, 227, 1);
+    p {
+      @apply py-1;
+      line-height: 22px;
+      font-size: 11px;
+      font-weight: 400;
+    }
+  }
+}
+
+// style when collapsed
+.ant-layout-sider-collapsed {
+  .menu__sidebar {
+    width: 68px;
+  }
+}
+
+// nav layout
+
+.nav__layout {
+  @apply flex h-screen w-screen;
+
+  .nav__layer {
+    @apply grow;
+    background-color: rgba($color: #000000, $alpha: 0.25);
+  }
+}

@@ -1,0 +1,13 @@
+<app-left-nav
+  class="absolute h-screen z-[11]"
+  [(isCollapsed)]="isCollapsed"></app-left-nav>
+<!-- <app-header class="pl-16 h-screen"> </app-header> -->
+
+<app-header
+  class="h-screen content__container"
+  [ngClass]="{ navbar__expand: !isCollapsed }"
+  [isCollapsed]="isCollapsed">
+  <ng-container *ngIf="isLoggedIn">
+    <router-outlet></router-outlet>
+  </ng-container>
+</app-header>

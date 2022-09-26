@@ -1,0 +1,62 @@
+<nz-sider
+  nzCollapsible
+  nzWidth="256px"
+  nzBreakpoint="md"
+  [(nzCollapsed)]="isCollapsed"
+  [nzTrigger]="null"
+  nzTheme="light">
+  <div class="h-screen">
+    <div class="menu__sidebar bg-bg-light">
+      <div class="sidebar__logo">
+        <a (click)="goToItems('/')" *ngIf="!isCollapsed">
+          <img
+            src="/assets/img/logo/nav-logo.png"
+            width="136px"
+            height="16px"
+            alt="logo" />
+        </a>
+        <button
+          class="nav__trigger"
+          (click)="isCollapsedChange.emit(!isCollapsed)">
+          <i
+            class="trigger"
+            nz-icon
+            [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+        </button>
+      </div>
+      <ul
+        class="nav__content overflow-y-auto"
+        nz-menu
+        nzMode="inline"
+        [nzInlineCollapsed]="isCollapsed">
+        <ng-container *ngFor="let item of dataRouting">
+          <li
+            nz-menu-item
+            nz-tooltip
+            nzTooltipPlacement="item.name"
+            [nzSelected]="this?.router?.url?.includes(item.url)"
+            (click)="goToItems(item.url)">
+            <i nz-icon [nzType]="item.icon"></i>
+            <span>{{ item.name }}</span>
+          </li>
+        </ng-container>
+      </ul>
+      <div class="px-2.5">
+        <div class="footer__content">
+          <ng-container *ngIf="isCollapsed; else elseTemplate">
+            <p>V1.0.0</p>
+            <p>© PCOM</p>
+          </ng-container>
+          <ng-template #elseTemplate>
+            <p>V1.0.0</p>
+            <p>© Powered by PCOM-SSB</p>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+    <!-- <div
+      class="nav__layer"
+      *ngIf="!isCollapsed"
+      (click)="isCollapsed = true"></div> -->
+  </div>
+</nz-sider>

@@ -1,0 +1,47 @@
+<nz-layout>
+  <nz-header
+    class="p-0 w-full fixed top-0 left-0 z-10 pl-[68px] bg-bg-light"
+    [ngClass]="{ navbar__expand: !isCollapsed }">
+    <div class="app__header">
+      <div class="header__breadcrumb">
+        <nz-breadcrumb [nzAutoGenerate]="true" nzSeparator=">"></nz-breadcrumb>
+      </div>
+      <div class="header__profile">
+        <div class="px-2">
+          <button class="">
+            <nz-avatar
+              class="flex items-center justify-center"
+              [nzSize]="20"
+              nzIcon="bell"></nz-avatar>
+          </button>
+        </div>
+        <div class="px-2 flex items-center">
+          <div class="px-1">
+            <nz-avatar
+              class="bg-bg-dark-blue"
+              [nzText]="
+                userProfile?.username?.charAt(0)?.toUpperCase()
+              "></nz-avatar>
+          </div>
+          <div class="px-1">
+            <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="userOptionMenu">
+              {{ userProfile?.username }}
+              <i nz-icon nzType="down"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nz-header>
+  <div class="overflow-auto bg-bg-light mt-16">
+    <ng-content></ng-content>
+  </div>
+  <app-footer></app-footer>
+</nz-layout>
+
+<nz-dropdown-menu #userOptionMenu="nzDropdownMenu">
+  <ul nz-menu>
+    <li nz-menu-item nzDisabled>Edit Profile</li>
+    <li nz-menu-item class="cursor-pointer" (click)="logout()">Logout</li>
+  </ul>
+</nz-dropdown-menu>
